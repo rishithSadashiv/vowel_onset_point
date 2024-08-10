@@ -40,38 +40,18 @@ hold on;
 plot(t1,PP1);
 
 
-
 linkaxes([a(1), a(2)],'x');
 
 Speech_Rate = 1;
 [G,Gd]= gausswin((800/Speech_Rate)+1,(133/Speech_Rate)+1);
-Gd_flipped = fliplr(Gd);
-
 figure(2);
-a(1) = subplot(311);
+a(1) = subplot(211);
 plot(G);
 hold on;
-a(2) = subplot(312);
+a(2) = subplot(212);
 plot(Gd);
-hold on;
-a(3) = subplot(313);
-plot(Gd_flipped);
-linkaxes([a(1), a(2), a(3)],'x');
+linkaxes([a(1), a(2)],'x');
 
 
-[EVIvlrop_he1_vep,EVIvlrop_zf1_vep,total_vlrop1_vep, vlrop1_vep, PP1_vep, EVIvlrop1_vep]=VLR_vlrop_vlrep_v2_vep(d',1);
-figure(3);
-a(1) = subplot(311);
-plot(t1,speech1,'k');
-hold on;
-plot(t1,PP1);
-a(2) = subplot(312);
-plot(t1,speech1,'k');
-hold on;
-plot(t1,PP1_vep);
-a(3) = subplot(313);
-plot(t1,EVIvlrop1_vep);
-hold on;
-plot(t1,PP1_vep);
-linkaxes([a(1), a(2), a(3)],'x');
+
 
